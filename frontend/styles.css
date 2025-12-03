@@ -1,0 +1,25 @@
+:root{
+  --bg: #0f172a;
+  --card: #0b1220;
+  --accent: #7c3aed;
+  --muted: #94a3b8;
+  --text: #e6eef8;
+}
+*{box-sizing:border-box}
+body{background:linear-gradient(180deg,#071033 0%, #0b1220 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;padding:24px}
+.app{width:100%;max-width:780px}
+header h1{margin:0 0 12px 0;font-size:20px}
+.chat{background:rgba(255,255,255,0.03);border-radius:12px;padding:16px;height:480px;overflow:auto;display:flex;flex-direction:column;gap:12px;border:1px solid rgba(255,255,255,0.04)}
+.bubble{max-width:85%;padding:12px 14px;border-radius:12px;line-height:1.4}
+.user{align-self:flex-end;background:linear-gradient(90deg,#1f2937, #111827);color:#fff;border-bottom-right-radius:4px}
+.bot{align-self:flex-start;background:linear-gradient(90deg,#0b1220,#071033);border:1px solid rgba(255,255,255,0.03)}
+.composer{display:flex;margin-top:12px;gap:8px}
+.composer input{flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);outline:none}
+.composer button{padding:10px 16px;border-radius:10px;border:none;background:var(--accent);color:white;cursor:pointer}
+.loader{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:12px}
+.loader.hidden{display:none}
+.loader .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);opacity:0;animation:blink 1s infinite}
+.loader .dot:nth-child(2){animation-delay:0.2s}
+.loader .dot:nth-child(3){animation-delay:0.4s}
+@keyframes blink{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+footer{margin-top:12px;color:var(--muted)}

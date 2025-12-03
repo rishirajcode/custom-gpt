@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT - Streaming Demo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>ChatGPT Streaming Demo</h1>
+    </header>
+
+    <main>
+      <div id="chat" class="chat"></div>
+
+      <form id="form" class="composer" onsubmit="return sendMessage();">
+        <input id="input" autocomplete="off" placeholder="Type your message..." />
+        <button id="sendBtn" type="submit">Send</button>
+      </form>
+
+      <div id="loader" class="loader hidden">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </main>
+
+    <footer>
+      <small>Deployable backend (FastAPI) + streaming frontend</small>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
