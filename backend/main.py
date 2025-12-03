@@ -24,6 +24,10 @@ app.add_middleware(
 
 class Message(BaseModel):
     message: str
+# ✅ Add the health check route right here
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.post("/chat")
 async def chat(msg: Message):
