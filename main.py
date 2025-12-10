@@ -87,3 +87,4 @@ async def stream(request: Request):
             yield json.dumps({"error": str(e)}).encode("utf-8")
 
     return StreamingResponse(event_stream(), media_type="application/x-ndjson")
+#//END
